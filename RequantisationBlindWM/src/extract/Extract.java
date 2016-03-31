@@ -3,7 +3,6 @@
  *
  * @author Deepayan Bhowmik
  *
- * E-mail: d.bhowmik@sheffield.ac.uk
  * Department of Electronic and Electrical Engineering
  * University of Sheffield
  * Copyright reserved
@@ -11,7 +10,6 @@
 
 package extract;
 
-import java.awt.*;
 import java.io.*;
 import javax.swing.*;
 import Embedding.*;

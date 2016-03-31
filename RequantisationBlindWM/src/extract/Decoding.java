@@ -25,7 +25,7 @@ public class Decoding {
         ReadParameter parameter = new ReadParameter();
         Dwt wavelet = new Dwt();
         Imread image = new Imread();
-        DirectCoeffExtract direct = new DirectCoeffExtract();
+//        DirectCoeffExtract direct = new DirectCoeffExtract();
         QuantisationExtraction quant = new QuantisationExtraction();
         Decoding decode = new Decoding();
         
@@ -44,34 +44,10 @@ public class Decoding {
             }
         }    
               
-        //Decide whether it is non-blind or blind watermarking scheme
-        // All direct coefficient modification embedding are non-blind type
-        //  Quantisation embedding are normally belongs to blind watermarking
-        if(parameter.getEmbedProcedure().compareTo("DR") == 0){
-            //A non-blind type
-            
-            //Reading original image       
-            double[][] originalImage = image.Imread(parameter.getOriginalImageName());    
-            int[] orgSize = image.Size();
-            
-            double[][] orgImageCoeff = wavelet.dwt(originalImage,orgSize,parameter.getDecompLevel(),parameter.getWaveletName());
-             
-            // Get it separated in region of interest
-            for(int m=0; m<xROI; m++){
-                for(int n=0; n<yROI; n++){
-                    orgROI[m][n] = orgImageCoeff[m][n]; 
-                }
-            } 
-            
-            //Call the direct extraction procedure            
-            direct.DirectCoeffExtract(wmCoeffROI,orgROI);
-                            
-        } else if(parameter.getEmbedProcedure().compareTo("QN") == 0){
+        
             // A blind type detection
             //Call the quantisation extraction procedure            
-            quant.QuantisationExtraction(wmCoeffROI);
-                 
-        } // End of if-else condition
+        quant.QuantisationExtraction(wmCoeffROI);
         
         //Extract watermark to be compared
         decode.MejorityVote();
@@ -79,7 +55,6 @@ public class Decoding {
     
     //Calculate extratcted watermark based on majority voting rule
      public void MejorityVote(){
-         DirectCoeffExtract dirExt = new DirectCoeffExtract();
          QuantisationExtraction qntExt = new QuantisationExtraction();
          Watermark orgWater = new Watermark();
          ReadParameter param = new ReadParameter();
@@ -87,13 +62,9 @@ public class Decoding {
          double[] countZero = new double[orgWater.getWatermark().length]; 
          double[] countOne = new double[orgWater.getWatermark().length];
          
-         if(param.getEmbedProcedure().compareTo("DR")==0){
-             countZero = dirExt.getCountZero();
-             countOne = dirExt.getCountOne();
-         } else if(param.getEmbedProcedure().compareTo("QN")==0){
-             countZero = qntExt.getCountZero();
-             countOne = qntExt.getCountOne();
-         }
+         
+         countZero = qntExt.getCountZero();
+         countOne = qntExt.getCountOne();
          
      
          //Initialised the extracted watermark 
