@@ -1,4 +1,4 @@
-# Source code README for scalable watermarking
+# README Source code for scalable watermarking
 
 Code for scalable watermarking and and existing re-quantisation based blind watermarking scheme are available from separate directories. The srouce files are written in JAVA and available in a form of Netbeans project. 
 
