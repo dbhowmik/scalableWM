@@ -2,6 +2,8 @@
 
 Code for scalable watermarking and and existing re-quantisation based blind watermarking scheme are available from separate directories. The srouce files are written in JAVA and available in a form of Netbeans project. 
 
+Source codes are available from src/ folder. 
+
 Inidividual projects can be browsed with a starting point at main.java. 
 
 The content adaptation parts (if exists) uses Windows executable builds for Kakadu software. Therefore these commands related to such modules are windows compatible. 
