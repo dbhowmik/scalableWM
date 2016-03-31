@@ -1,0 +1,13 @@
+inName   	image\b11.pgm
+outName   	code\b11
+wmName	logo\logoSmU.pgm	
+codeStream	code\code.wmc
+wavelet     97       	# Wavelet kernel.
+level		3		# Decomposition level
+depth		6		# Embedding depth -- refer the paper
+packetSize	16		# Packet size to calculate the error in code stream
+
+
+
+
+
