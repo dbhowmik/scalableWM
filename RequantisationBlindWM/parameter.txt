@@ -1,0 +1,91 @@
+*****************************************************************
+*              WEBCAM Watermark embedding parameters 	 	*
+*****************************************************************
+NOTE: Do not change the line position
+-----------------------------------------------
+Naming convention while saving
+lenaWMD.pgm means 
+main image = lena, 
+WM = Watermarked, 
+D = Direct coeff modification / Q = Quantisation
+.pgm extension must
+****************************************************
+Image and Wavelet related parameters
+****************************************************
+Image name to read (including extension .pgm only):
+b11.pgm
+------------------------------------------------------------------------------
+Decomposition Level (write 1 / 2 ...):
+3
+------------------------------------------------------------------------------
+Wavelet choice (D4=Daubechies-4, HR=Haar, 97=9/7, 53=5/3, 
+MH=Morphological Haar,MQ=Median Quincunx):
+97
+------------------------------------------------------------------------------
+Watermark name to read (including extension .pgm only):
+logoSmU.pgm
+------------------------------------------------------------------------------
+Image name to be saved:
+b1197.pgm
+------------------------------------------------------------------------------
+****************************************************
+Watermark Embedding parameters
+****************************************************
+Subband choice (LF=Low Frequency, HF=High Frequency, AF=All frequency):
+LF
+------------------------------------------------------------------------------
+Embedding procedure (DR=Direct coeff modification, QN=Quantisation):
+QN
+****************************************************
+Direct coeff modification parameters
+****************************************************
+Threshold choice for direct coeff mod (AD=Adaptive, MA=Manual) 
+AD
+------------------------------------------------------------------------------
+NOTE: For manual threshold, write values of different subbands you have
+selected to include watermark. For 'AF' selection put value for all subband
+------------------------------------------------------------------------------
+Threshold value for LL subband(ignore in case of AD type or other subbands):
+450
+------------------------------------------------------------------------------
+Threshold value for LH subband(ignore in case of AD type or other subbands):
+0
+------------------------------------------------------------------------------
+Threshold value for HL subband(ignore in case of AD type or other subbands):
+0
+------------------------------------------------------------------------------
+Threshold value for HH subband(ignore in case of AD type or other subbands):
+0
+------------------------------------------------------------------------------
+Choice of formula for direct coeff mod
+(E1. C'[m,n] = C[m,n] + alpha * C[m,n] * W[m,n])
+(E2. C'[m,n] = C[m,n] + alpha * {C[m,n]}^2 * W[m,n]):
+E1
+------------------------------------------------------------------------------
+Alpha value to decide watermark weightage
+------------------------------------------------------------------------------
+Alpha value for LL subband (Normally 0.2)
+0.08
+------------------------------------------------------------------------------
+Alpha value for LH subband (Normally 0.1)
+0.1
+------------------------------------------------------------------------------
+Alpha value for HL subband (Normally 0.1)
+0.1
+------------------------------------------------------------------------------
+Alpha value for HH subband (Normally 0.05)
+0.05
+****************************************************
+Quantisation method parameters
+****************************************************
+Quantisation embedding choice (RS=Raster Scanning, MF=Median Filtering):
+RS
+------------------------------------------------------------------------------
+Aplha value to decide raster scanning quantisation step:
+0.1
+------------------------------------------------------------------------------
+Quantisation value for Meadian Filtering to decide quantisation Step 
+3
+******************************************************************************
+------------------------------END---------------------------------------------
+******************************************************************************
