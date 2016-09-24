@@ -4,6 +4,7 @@ Algorithmic details and citation details for this code:
 
 D. Bhowmik and C. Abhayaratne, "Quality Scalability Aware Watermarking for Visual Content," in IEEE Transactions on Image Processing, vol. 25, no. 11, pp. 5158-5172, Nov. 2016.
 doi: 10.1109/TIP.2016.2599785
+
 URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7542204&isnumber=7564375
 
 
