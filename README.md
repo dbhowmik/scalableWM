@@ -1,13 +1,13 @@
 # README Source code for scalable watermarking
 
-Algorithmic details and citation details for this code: 
+Citation details and algorithmic description: 
 
 D. Bhowmik and C. Abhayaratne, "Quality Scalability Aware Watermarking for Visual Content," in IEEE Transactions on Image Processing, vol. 25, no. 11, pp. 5158-5172, Nov. 2016.
 doi: 10.1109/TIP.2016.2599785
 
 URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7542204&isnumber=7564375
 
-
+----
 Code for scalable watermarking and and existing re-quantisation based blind watermarking scheme are available from separate directories. The srouce files are written in JAVA and available in a form of Netbeans project. 
 
 Source codes are available from src/ folder. 
